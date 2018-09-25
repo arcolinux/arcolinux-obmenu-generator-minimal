@@ -1,1 +1,1 @@
-# ArcoLinux Obmenu-Generator configs
+# ArcoLinux Obmenu-Generator Minimal configs

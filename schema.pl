@@ -68,11 +68,8 @@ our $SCHEMA = [
 
         {item => ['nitrogen',                               'Choose wallpaper',         'nitrogen']},
         {item => ['lxappearance',                           'Lxappearance',             'theme']},
-        {item => ['xfce4-appearance-settings',              'Xfce4 Appearance',         'preferences-desktop-theme']},
-        {sep => undef},
-        {item => ['exo-preferred-applications',             'Preferred Applications',   'preferred-applications']},
-        {item => ['system-config-printer',                  'Printing',                 'printer']},
         {item => ['xfce4-settings-manager',                 'Xfce4 Settings Manager',   'preferences-desktop']},
+        {item => ['system-config-printer',                  'Printing',                 'printer']},
         {sep => undef},
         # Openbox category
         {pipe => ['am-compositor',      'Compositor',      'compton']},
