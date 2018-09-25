@@ -34,8 +34,7 @@ our $SCHEMA = [
     {item => ['exo-open --launch WebBrowser ',                                      'Web Browser',       'webbrowser-app']},
     {sep => undef},
 
-    #{sep => 'Applications'},
-    #          NAME            LABEL                ICON
+     #          NAME            LABEL                ICON
     {cat => ['utility',     'Accessories', 'applications-utilities']},
     {cat => ['development', 'Development', 'applications-development']},
     {cat => ['education',   'Education',   'applications-science']},
@@ -48,26 +47,19 @@ our $SCHEMA = [
     {cat => ['settings',    'Settings',    'gnome-settings']},
     {cat => ['system',      'System',      'applications-system']},
 
-    #{cat => ['qt',          'QT Applications',    'qt4logo']},
-    #{cat => ['gtk',         'GTK Applications',   'gnome-applications']},
-    #{cat => ['x_xfce',      'XFCE Applications',  'applications-other']},
-    #{cat => ['gnome',       'GNOME Applications', 'gnome-applications']},
-    #{cat => ['consoleonly', 'CLI Applications',   'applications-utilities']},
-
-    ## Custom advanced settings
-    #{sep => "Settings"},
     {sep => undef},
 
     {pipe => ['am-conky-pipemenu',  'Conky',        'conky']},
-    # Preferences
+
     {begin_cat => ['Preferences', 'theme']},
 
         {item => ['nitrogen',                               'Choose wallpaper',         'nitrogen']},
         {item => ['lxappearance',                           'Lxappearance',             'theme']},
         {item => ['xfce4-settings-manager',                 'Xfce4 Settings Manager',   'preferences-desktop']},
         {item => ['system-config-printer',                  'Printing',                 'printer']},
+
         {sep => undef},
-        # Openbox category
+
         {pipe => ['am-compositor',      'Compositor',      'compton']},
         {begin_cat => ['Openbox', 'openbox']},
             {item => ["$editor ~/.config/openbox/menu.xml",     'Edit menu.xml',                 'text-xml']},
@@ -84,9 +76,11 @@ our $SCHEMA = [
         {end_cat => undef},
         {pipe => ['am-tint2-pipemenu',  'Tint2',        'tint2']},
         {item => ['tint2conf',          'Tint2 GUI',    'tint2conf']},
+
         {sep => undef},
+
     	{pipe => ['am-kb-pipemenu',                'Display Keybinds',                  'cs-keyboard']},
-       # obmenu-generator
+
     	{begin_cat => ['Obmenu-Generator', 'menu-editor']},
         	{item => ["$editor ~/.config/obmenu-generator/schema.pl", 'Menu Schema', 'text-x-source']},
         	{item => ["$editor ~/.config/obmenu-generator/config.pl", 'Menu Config', 'text-x-source']},
