@@ -29,10 +29,6 @@ my $editor = $CONFIG->{editor};
 
 our $SCHEMA = [
 	{sep => "ArcoLinux"},
-    #          COMMAND                 LABEL                ICON
-    #{item => ['xdg-open .',        'File Manager',      'file-manager']},
-    #{item => ['xterm',             'Terminal',          'terminal']},
-    #{item => ['xdg-open http://',  'Web Browser',       'web-browser']},
     {item => ['exo-open --launch TerminalEmulator',                                 'Terminal',          'terminal']},
     {item => ['exo-open --launch FileManager',                                      'File Manager',      'file-manager']},
     {item => ['exo-open --launch WebBrowser ',                                      'Web Browser',       'webbrowser-app']},
@@ -88,26 +84,23 @@ our $SCHEMA = [
         {end_cat => undef},
         {pipe => ['am-tint2-pipemenu',  'Tint2',        'tint2']},
         {item => ['tint2conf',          'Tint2 GUI',    'tint2conf']},
+        {sep => undef},
+    	{pipe => ['am-kb-pipemenu',                'Display Keybinds',                  'cs-keyboard']},
+       # obmenu-generator
+    	{begin_cat => ['Obmenu-Generator', 'menu-editor']},
+        	{item => ["$editor ~/.config/obmenu-generator/schema.pl", 'Menu Schema', 'text-x-source']},
+        	{item => ["$editor ~/.config/obmenu-generator/config.pl", 'Menu Config', 'text-x-source']},
+        	{sep  => undef},
+        	{item => ['obmenu-generator -p',       'Generate a pipe menu',              'menu-editor']},
+        	{item => ['obmenu-generator -s -c',    'Generate a static menu',            'menu-editor']},
+       	 	{item => ['obmenu-generator -p -i',    'Generate a pipe menu with icons',   'menu-editor']},
+        	{item => ['obmenu-generator -s -i -c', 'Generate a static menu with icons', 'menu-editor']},
+       	 	{sep  => undef},
+        	{item => ['obmenu-generator -d',       'Refresh Icon Set',                  'gtk-refresh']},
+    	{end_cat => undef},
+
     {end_cat => undef},
 
-    {sep => undef},
-    # obmenu-generator
-    {begin_cat => ['Obmenu-Generator', 'menu-editor']},
-        {item => ["$editor ~/.config/obmenu-generator/schema.pl", 'Menu Schema', 'text-x-source']},
-        {item => ["$editor ~/.config/obmenu-generator/config.pl", 'Menu Config', 'text-x-source']},
-        {sep  => undef},
-        {item => ['obmenu-generator -p',       'Generate a pipe menu',              'menu-editor']},
-        {item => ['obmenu-generator -s -c',    'Generate a static menu',            'menu-editor']},
-        {item => ['obmenu-generator -p -i',    'Generate a pipe menu with icons',   'menu-editor']},
-        {item => ['obmenu-generator -s -i -c', 'Generate a static menu with icons', 'menu-editor']},
-        {sep  => undef},
-        {item => ['obmenu-generator -d',       'Refresh Icon Set',                  'gtk-refresh']},
-    {end_cat => undef},
-
-    {sep => undef},
-    {pipe => ['am-kb-pipemenu',                'Display Keybinds',                  'cs-keyboard']},
-    ## The xscreensaver lock command
-    #{item => ['xscreensaver-command -lock', 'Lock', 'system-lock-screen']},
     {sep => undef},
     {item => ['slimlock',                      'Lock Screen',                       'lock']},
     {item => ['oblogout',                      'Exit Openbox',                      'exit']},
