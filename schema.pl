@@ -36,7 +36,6 @@ our $SCHEMA = [
     {item => ['exo-open --launch TerminalEmulator',                                 'Terminal',          'terminal']},
     {item => ['exo-open --launch FileManager',                                      'File Manager',      'file-manager']},
     {item => ['exo-open --launch WebBrowser ',                                      'Web Browser',       'webbrowser-app']},
-    {item => ['geany',                                                              'Text Editor',       'geany']},
     {sep => undef},
 
     #{sep => 'Applications'},
@@ -59,10 +58,6 @@ our $SCHEMA = [
     #{cat => ['gnome',       'GNOME Applications', 'gnome-applications']},
     #{cat => ['consoleonly', 'CLI Applications',   'applications-utilities']},
 
-    {sep => undef},
-    {pipe => ['am-places-pipemenu',         'Places',       'folder']},
-    {pipe => ['am-recent-files-pipemenu',   'Recent Files', 'folder-recent']},
-
     ## Custom advanced settings
     #{sep => "Settings"},
     {sep => undef},
@@ -72,17 +67,11 @@ our $SCHEMA = [
     {begin_cat => ['Preferences', 'theme']},
 
         {item => ['nitrogen',                               'Choose wallpaper',         'nitrogen']},
-        {item => ["gksudo geany /etc/oblogout.conf",        'Exit Appearance',          'theme']},
-        {item => ['gksudo lightdm-gtk-greeter-settings',    'LightDM Appearance',       'theme']},
         {item => ['lxappearance',                           'Lxappearance',             'theme']},
-        {item => ["gksudo geany /etc/slim.conf",            'Slim Appearance',          'theme']},
-        {item => ['geany ~/.config/termite/config',         'Termite Appearance',       'theme']},
         {item => ['xfce4-appearance-settings',              'Xfce4 Appearance',         'preferences-desktop-theme']},
         {sep => undef},
-        {item => ["gksudo geany /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm.conf",  'Login Settings','login']},
         {item => ['exo-preferred-applications',             'Preferred Applications',   'preferred-applications']},
         {item => ['system-config-printer',                  'Printing',                 'printer']},
-        {item => ['pavucontrol',                            'Sound Preferences',        'multimedia-volume-control']},
         {item => ['xfce4-settings-manager',                 'Xfce4 Settings Manager',   'preferences-desktop']},
         {sep => undef},
         # Openbox category
@@ -104,20 +93,6 @@ our $SCHEMA = [
         {item => ['tint2conf',          'Tint2 GUI',    'tint2conf']},
     {end_cat => undef},
 
-     # Preferences
-    {begin_cat => ['System Settings', 'settings']},
-        {item => ['pamac-manager',  'Pamac Updater and Package Manager',    'pamac']},
-        {sep => undef},
-        {item => ["gksudo thunar",  'File Manager As Root',     'thunar']},
-        {item => ["gksudo geany",   'Text Editor As Root',      'geany']},
-        {sep => undef},
-        {item => ["gnome-disks", 			'Disks',                  				'gnome-disks']},
-        {item => ["gksudo gparted", 'GParted',                  'gparted']},
-        {item => ["hardinfo", 				'System Profiler and Benchmark',       	'hardinfo']},
-        {item => ["xfce4-taskmanager", 		'Taskmanager',                  		'gnome-system-monitor']},
-
-    {end_cat => undef},
-
     {sep => undef},
     # obmenu-generator
     {begin_cat => ['Obmenu-Generator', 'menu-editor']},
@@ -133,9 +108,6 @@ our $SCHEMA = [
     {end_cat => undef},
 
     {sep => undef},
-    {pipe => ['am-need-to-know-pipemenu',      'Need To Know',                      'stock_about']},
-    {sep  => undef},
-    {pipe => ['am-help-pipemenu',              'Help &amp; Resources',              'info']},
     {pipe => ['am-kb-pipemenu',                'Display Keybinds',                  'cs-keyboard']},
     ## The xscreensaver lock command
     #{item => ['xscreensaver-command -lock', 'Lock', 'system-lock-screen']},
