@@ -53,6 +53,7 @@ our $SCHEMA = [
 
     {begin_cat => ['Preferences', 'theme']},
 
+        {item => ['nitrogen',                               'Choose wallpaper',         'nitrogen']},
         {item => ['lxappearance',                           'Lxappearance',             'theme']},
         {item => ['system-config-printer',                  'Printing',                 'printer']},
         {item => ['xfce4-settings-manager',                 'Xfce4 Settings Manager',   'preferences-desktop']},
