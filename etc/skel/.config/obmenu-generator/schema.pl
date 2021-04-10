@@ -54,7 +54,8 @@ our $SCHEMA = [
 
     {begin_cat => ['Preferences', 'theme']},
 
-        {item => ['nitrogen',                               'Nitrogen',         'nitrogen']},
+        {item => ['nitrogen',                               'Nitrogen',                 'nitrogen']},
+        {item => ['sddm-config-editor',                     'Sddm application',         'theme']},
         {item => ['lxappearance',                           'Lxappearance',             'theme']},
         {item => ['system-config-printer',                  'Printing',                 'printer']},
         {item => ['xfce4-settings-manager',                 'Xfce4 Settings Manager',   'preferences-desktop']},
