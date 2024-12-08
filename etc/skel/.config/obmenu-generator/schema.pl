@@ -30,9 +30,9 @@ my $editor = $CONFIG->{editor};
 our $SCHEMA = [
 	{sep => "ArcoLinux"},
     #          COMMAND                 LABEL                ICON
-    {item => ['alacritty',                                 'Terminal',          'terminal']},
-    {item => ['exo-open --launch FileManager',                                      'File Manager',      'file-manager']},
-    {item => ['exo-open --launch WebBrowser ',                                      'Web Browser',       'webbrowser-app']},
+    {item => ['alacritty',                                 'Alacritty',          'terminal']},
+    {item => ['thunar',                                      'Thunar',      'file-manager']},
+    {item => ['firefox ',                                      'Firefox',       'webbrowser-app']},
     {sep => undef},
 
     #          NAME            LABEL                ICON
