@@ -54,10 +54,7 @@ our $SCHEMA = [
 
     {begin_cat => ['Preferences', 'theme']},
 
-        {item => ['nitrogen',                               'Nitrogen',                 'nitrogen']},
         {item => ['lxappearance',                           'Lxappearance',             'theme']},
-        {item => ['system-config-printer',                  'Printing',                 'printer']},
-        {item => ['xfce4-settings-manager',                 'Xfce4 Settings Manager',   'preferences-desktop']},
         {sep => undef},
 
         {pipe => ['am-compositor',      'Compositor',      'compton']},
@@ -72,12 +69,8 @@ our $SCHEMA = [
             {item => ['openbox --restart',                      'Restart Openbox',               'openbox']},
             {item => ['openbox --reconfigure',                  'Reconfigure Openbox',           'openbox']},
         {end_cat => undef},
-        {pipe => ['am-tint2-pipemenu',  'Tint2',        'tint2']},
-        {item => ['tint2conf',          'Tint2 GUI',    'tint2conf']},
 
         {sep => undef},
-
-    	{pipe => ['am-kb-pipemenu',                'Display Keybinds',                  'cs-keyboard']},
 
     	{begin_cat => ['Obmenu-Generator', 'menu-editor']},
         	{item => ["$editor ~/.config/obmenu-generator/schema.pl", 'Menu Schema', 'text-x-source']},
